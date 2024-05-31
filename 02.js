@@ -233,9 +233,110 @@
 
 /*
 1)	Отформатируйте data в массив объектов с такими вот св-ми*/
+/*[
+    { value: 1, label: 'Option 1' },
+    { value: 2, label: 'Option 2' },
+    { value: 3, label: 'Option 3' }
+]*/
 
-let data = [
-    {value: 1, name: "Option 1"},
-    {value: 2, name: "Option 2"},
-    {value: 3, name: "Option 3"},
-];
+
+// let data = [
+//     {value: 1, name: "Option 1"},
+//     {value: 2, name: "Option 2"},
+//     {value: 3, name: "Option 3"},
+// ];
+//
+// let res = data.map(el=>({
+//     value: el.value,
+//     label: el.name
+// }))
+// console.log(res)
+
+// let formattedData = data.map(item => {
+// мапим объект data и возвращаем объект с нужными нам ключами и записываем в качестве значений - значения из массива объектов дата
+//     return {
+//         value: item.value,
+//         label: item.name
+//     };
+// });
+
+
+/*2)	У вас есть массив объектов, и вы хотите добавить к каждому объекту новое свойство на основе существующих данных. Этим свойством будет discountPrice, где значение будет вычисляться таким образом price * 0.9
+
+Исходный массив:*/
+
+
+// let products = [
+//     {id: 1, name: "Apple", price: 1.99},
+//     {id: 2, name: "Banana", price: 0.99},
+//     {id: 3, name: "Orange", price: 2.49},
+// ];
+//
+// let res = products.map((el) => {
+//     return {
+//         id: el.id,
+//         name: el.name,
+//         price: el.price,
+//         discountPrice: (el.price * 0.9)
+//     }
+//
+// })
+//
+// console.log(res)
+
+/*
+1)	Напишите функцию, которая определяет, является ли переданная строка палиндромом. Палиндромом считается строка, которая читается одинаково как слева направо, так и справа налево(split, reverse, join)*/
+
+// function isPalindrome(str) {
+//     let str2 = str.split("").reverse().join("");
+//     return (str === str2 ? str2 : "строка не палиндром");
+//
+// }
+//
+// console.log(isPalindrome("level"));
+// console.log(isPalindrome("racecar"));
+// console.log(isPalindrome("hello"));
+
+/*2)	Выведите все дублирующиеся элементы массива(filter, indexOf)
+
+например исходный массив*/
+
+// let arr1 = [1, 1, 5, 6, 7, 8, 9, 9, 3, 4, 0, 19];
+//
+// function removeDublicates(arr) {
+//   let res = arr.filter((el, index) => arr.indexOf(el) !== index)
+//    console.log(res)
+// }
+// removeDublicates(arr1)
+
+/*
+3)	Напишите функцию JavaScript для сортировки массива объектов по определенному свойству в порядке возрастания, используя метод Array.prototype.sort()(тут кастомная сортировка придется чуть-чуть поискать и подумать)
+
+Пример*/
+
+
+// const persons = [
+//     {name: "Bob", age: 30},
+//     {name: "Alice", age: 425},
+//     {name: "Charlie", age: 3},
+// ];
+//
+// function sortByProperty(arr, proper) {
+//     return (arr.sort((a, b) => {
+//         if (a[proper] > b[proper]) {
+//             return 1
+//         }
+//         if (a[proper] < b[proper]) {
+//             return -1
+//         } else return 0
+//     }))
+// }
+//
+// function sortProperty (arr, proper){
+//     return (arr.sort((a,b)=> a[proper].localeCompare(b[proper])))
+// }
+//
+//
+// console.log(sortByProperty(persons, "age"))
+// console.log(sortProperty(persons, "name"))
+
